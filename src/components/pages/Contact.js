@@ -24,28 +24,39 @@ function Contact() {
     }
   };
 
+  const handleBlur = (e) => {
+    if(!e.target.value){
+      e.target.className += 'border border-danger'
+    } else {
+      e.target.className -= 'border border-danger'
+    }
+  }
   const handleFormSubmit = (e) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
-    if(userName === ''){
-      setUserName('Name field is required')
-      return
-    }
-    if (email !== /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/) {
-      setEmail('valid email address required')
-      return
-    }
-    if(text === ''){
-      setText('a message is required')
-      return
-    }
 
+    let errFlag = false;
+
+    if (userName === '') {
+      setUserName('Name field is required')
+      errFlag = true;
+    }
+    if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
+      setEmail('valid email address required')
+      errFlag = true;
+    }
+    if (text === '') {
+      setText('a message is required')
+      errFlag = true;
+    }
+    if (errFlag) {
+      return
+    }
     // If everything goes according to plan, we want to clear out the input after a successful registration.
     setUserName('');
     setEmail('');
     setText('Sent!');
   };
-
 
 
   return (
@@ -58,6 +69,7 @@ function Contact() {
           onChange={handleInputChange}
           type="email"
           placeholder="email"
+          onBlur={ handleBlur}
           required
         />
         <label for="userName" className="form-label">Your name</label>
@@ -66,10 +78,12 @@ function Contact() {
           name="userName"
           onChange={handleInputChange}
           type="text"
+          onBlur={ handleBlur }
           placeholder="username" required
         />
         <label for="text" className="form-label">Your message for me</label>
-        <textarea class="form-control" rows="10" placeholder="Message" name="text" onChange={handleInputChange} required></textarea>
+        <textarea class="form-control" rows="10" placeholder="Message" name="text" value={text} onChange={handleInputChange} onBlur={ handleBlur } required></textarea>
+
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
     </div>

@@ -35,12 +35,12 @@ export default function Project() {
             {projectArray.map(({ title, picLink, picAlt, deployedLink, repoLink }) => {
                 return (
                     <div key={title} className="project card">
-                        <a className='deployed-link' href={deployedLink} target='_blank'>
+                        <a className='deployed-link' href={deployedLink} target='_blank' rel='noreferrer'>
                             <img className='project-image card-img-top' src={picLink} alt={picAlt}></img>
                         </a>
                         <div className="card-body card-Content">
                             <p className="project-title">{title}</p>
-                            <a className='git-link ' href={repoLink} target='_blank'><img className='git-icon' src={githubIcon}></img></a>
+                            <a className='git-link ' href={repoLink} target='_blank' rel='noreferrer'><img className='git-icon' src={githubIcon} alt='github icon'></img></a>
                         </div>
                     </div>
                 )
