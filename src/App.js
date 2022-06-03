@@ -14,7 +14,7 @@ import FunLines from "./components/FunLines";
 const App = () => {
   return (
     <BrowserRouter>
-    <div className="d-flex">
+    <div className="d-flex header-container">
       <Header />
       <Navigation/>
     </div>

@@ -8,3 +8,12 @@
     margin-top: 1vh;
     font-size: 300%;
 }
+
+@media  screen and (max-width: 600px) {
+    .header {
+        justify-content: center;
+    }
+    .heading {
+        text-align: center;
+    }
+  }

@@ -8,7 +8,7 @@ body {
 }
 
 .nav-item {
-  font-size: 200%;
+  font-size:150%;
 }
 
 a:link, a:visited {
@@ -17,6 +17,13 @@ a:link, a:visited {
 
 @media  screen and (max-width: 600px) {
   .nav-item {
-    font-size: 100%;
+    flex: 50%;
+    width: auto;
+  }
+  .nav {
+    flex-wrap: wrap;
+  }
+  .header-container {
+    flex-direction: column;
   }
 }
