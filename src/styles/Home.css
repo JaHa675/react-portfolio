@@ -1,0 +1,52 @@
+*{
+    margin: auto;
+}
+
+body {
+    background-color: lavender;
+}
+
+.card-Content{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 5px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.project-title {
+  font-size: 150%;
+  max-width: 75%;
+  margin-right: 2vw;
+  margin-top: 2vh;
+}
+
+.deployed-link {
+  opacity: 0.8;
+}
+
+.project {
+    width: 40vw
+}
+
+.grid-container {
+    row-gap: 3vh;
+}
+
+.git-icon{
+  max-width: 100%;
+  min-width: 100%;
+}
+
+@media  screen and (max-width: 600px) {
+  .project-title {
+    font-size: 75%;
+  }
+  .card {
+    width: 75vw;
+  }
+}

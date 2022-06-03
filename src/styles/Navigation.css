@@ -1,0 +1,16 @@
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  font-size: 200%;
+}
+
+a:link, a:visited {
+  color: salmon;
+}

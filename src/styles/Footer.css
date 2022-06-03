@@ -1,0 +1,15 @@
+.icons {
+    margin-top: 5vh;
+    display: grid;
+    max-width: fit-content;
+}
+
+.git-link {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.linkedin-link {
+    grid-row: 1;
+    grid-column: 2;
+}

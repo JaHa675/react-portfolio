@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.heading {
+    margin-left: 2vh;
+    margin-top: 1vh;
+    font-size: 300%;
+}
