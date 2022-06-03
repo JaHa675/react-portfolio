@@ -14,3 +14,9 @@ body {
 a:link, a:visited {
   color: salmon;
 }
+
+@media  screen and (max-width: 600px) {
+  .nav-item {
+    font-size: 100%;
+  }
+}
