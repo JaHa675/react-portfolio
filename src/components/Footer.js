@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer className="footer icons">
                 <a className='git-link' href='https://github.com/JaHa675' target='_blank'><img src={githubIcon}></img></a>
-                <a className='linkedin-link' href='https://www.linkedin.com/in/james-harding-9a355016a/' target='_blank'><img src={linkedinIcon}></img></a>
+                <a className='linkedin-link' href='https://www.linkedin.com/in/jamesharding675' target='_blank'><img src={linkedinIcon}></img></a>
         </footer>
     );
 }
